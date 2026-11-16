@@ -1,0 +1,35 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+output/*
+!output/.gitkeep
+assets/approved/*
+!assets/approved/.gitkeep
+
+# Local environment and secrets
+.env
+.venv/
+venv/
+
+# Python generated files
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+
+# Generated media
+*.mp4
+*.mov
+*.wav
+*.mp3
+
+# Generated output
+output/
+renders/

@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "game-on-60"
+version = "0.2.0"
+description = "Approval-first autonomous gaming Shorts content studio"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn[standard]>=0.30.0",
+  "sqlalchemy>=2.0.30",
+  "pydantic>=2.8.0",
+  "pydantic-settings>=2.4.0",
+  "python-dotenv>=1.0.1",
+  "Pillow>=10.4.0",
+  "requests>=2.32.0"
+]
+
+[project.optional-dependencies]
+live = ["openai-agents>=0.4.0", "openai>=1.40.0"]
+postgres = ["psycopg[binary]>=3.2.0"]
+kafka = ["confluent-kafka>=2.5.0"]
+all = ["openai-agents>=0.4.0", "openai>=1.40.0", "psycopg[binary]>=3.2.0", "confluent-kafka>=2.5.0"]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
